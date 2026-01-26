@@ -1,133 +1,111 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>BONUSTIME</title>
+  <title>เว็บแรกของฉัน</title>
 
   <style>
-   body {
-  font-family: Arial, sans-serif;
-  background-image: url("BG.png.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  margin: 0;
-}
-.overlay {
-  background: rgba(255, 255, 255, 0.85);
-  min-height: 100vh;
-  padding: 40px 20px;
-}
-
-
-    h1 {
-      color: #1877f2;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
     }
 
-    .product {
-      background: white;
-      max-width: 320px;
-      margin: 20px auto;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .price {
-      color: #e53935;
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .btn-line {
-      display: inline-block;
-      background: #06c755;
+    header {
+      background: #4CAF50;
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
+      text-align: center;
+      padding: 20px;
     }
+
+    .container {
+      padding: 15px;
+    }
+
+    /* อนิเมชันเลื่อนเข้ามา */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* กล่องแต่ละรูป */
+.box {
+  background: rgb(243, 240, 239);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+
+  /* 🎞️ อนิเมชัน */
+  animation: slideUpFade 0.6s ease both;
+}
+.box img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box img:active {
+  transform: scale(0.94);
+}
+  /* รูปภาพ */
+.box img {
+  width: 100%;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+    
+
+    /* แตะแล้วเด้ง */
+.box img:active {
+  transform: scale(0.96);
+}
+
+/* hover (เผื่อเปิดในคอม) */
+.box img:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
   </style>
 </head>
-
 <body>
 
-<p>ทดสอบ deploy ใหม่</p>
-  <h1>CHANGBET789</h1>
-  <p>เข้าง่าย จ่ายเร็ว 💚</p>
+  <header>
+    <h1>สวัสดี 👋</h1>
+    <p>เว็บนี้ทำด้วย VS Code</p>
+  </header>
 
-  <div class="overlay">
-    <img src="k1.jpg" alt="เกม">
-    <h2>โบนัสไทม์</h2>
-    <p>18.00-19.00</p>
-    <div class="เรท">89%</div>
+  <div class="container">
 
-    <a href="https://lin.ee/OR9KevG" class="btn-line" target="_blank">
-      ติดต่อทาง LINE
-    </a>
+  <div class="box">
+    <img src="k1.jpg" alt="รูปที่ 1">
+    <p>รูปที่ 1</p>
   </div>
 
- <div class="overlay">
-    <img src="k2.jpg" alt="เกม">
-    <h2>โบนัสไทม์</h2>
-    <p>18.00-19.00</p>
-    <div class="เรท">89%</div>
-
-    <a href="https://lin.ee/OR9KevG" class="btn-line" target="_blank">
-      ติดต่อทาง LINE
-    </a>
+  <div class="box">
+    <img src="k2.jpg" alt="รูปที่ 2">
+    <p>รูปที่ 2</p>
   </div>
 
-   <div class="overlay">
-    <img src="k3.jpg" alt="เกม">
-    <h2>โบนัสไทม์</h2>
-    <p>18.00-19.00</p>
-    <div class="เรท">89%</div>
-
-    <a href="https://lin.ee/OR9KevG" class="btn-line" target="_blank">
-      ติดต่อทาง LINE
-    </a>
+  <div class="box">
+    <img src="k3.jpg" alt="รูปที่ 3">
+    <p>รูปที่ 3</p>
   </div>
 
-  <div class="overlay">
-    <img src="k4.jpg" alt="เกม">
-    <h2>โบนัสไทม์</h2>
-    <p>18.00-19.00</p>
-    <div class="เรท">89%</div>
-
-    <a href="https://lin.ee/OR9KevG" class="btn-line" target="_blank">
-      ติดต่อทาง LINE
-    </a>
+  <div class="box">
+    <img src="k4.jpg" alt="รูปที่ 4">
+    <p>รูปที่ 4</p>
   </div>
-  
+
+
+
+  </div>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
