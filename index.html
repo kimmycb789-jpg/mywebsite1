@@ -4,16 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>เว็บแรกของฉัน</title>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
 
-  hamburger.addEventListener('click', () => {
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  });
-</script>
-
-  <style>
+ <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -89,63 +81,7 @@
     <p>เว็บนี้ทำด้วย VS Code</p>
      </header>
   
-<!-- Hamburger menu -->
-  <div class="hamburger" id="hamburger">
-    &#9776; <!-- ไอคอนเมนูสามขีด -->
-  </div>
-/* Hamburger icon */
-.hamburger {
-  display: none; /* ซ่อนไว้บนคอม */
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-/* เมนู */
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: white;
-  background: rgba(255,255,255,0.2);
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.menu a:hover {
-  background: rgba(255,255,255,0.4);
-  transform: scale(1.05);
-}
-
-/* Responsive: มือถือ */
-@media screen and (max-width: 600px) {
-  .menu {
-    display: none; /* ซ่อนเมนูปกติ */
-    flex-direction: column;
-    gap: 10px;
-    background: #4CAF50;
-    position: absolute;
-    top: 70px; /* อยู่ใต้ header */
-    right: 10px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .hamburger {
-    display: block; /* แสดงไอคอน hamburger */
-  }
-}
-
-  <nav class="menu" id="menu">
+ <nav class="menu" id="menu">
     <a href="#box1">รูป 1</a>
     <a href="#box2">รูป 2</a>
     <a href="#box3">รูป 3</a>
@@ -179,6 +115,7 @@
 
 </body>
 </html>
+
 
 
 
