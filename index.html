@@ -79,11 +79,63 @@
   <header>
     <h1>สวัสดี 👋</h1>
     <p>เว็บนี้ทำด้วย VS Code</p>
-  </header>
+     </header>
+  
 <!-- Hamburger menu -->
   <div class="hamburger" id="hamburger">
     &#9776; <!-- ไอคอนเมนูสามขีด -->
   </div>
+/* Hamburger icon */
+.hamburger {
+  display: none; /* ซ่อนไว้บนคอม */
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* เมนู */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.2);
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.05);
+}
+
+/* Responsive: มือถือ */
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none; /* ซ่อนเมนูปกติ */
+    flex-direction: column;
+    gap: 10px;
+    background: #4CAF50;
+    position: absolute;
+    top: 70px; /* อยู่ใต้ header */
+    right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .hamburger {
+    display: block; /* แสดงไอคอน hamburger */
+  }
+}
 
   <nav class="menu" id="menu">
     <a href="#box1">รูป 1</a>
@@ -119,4 +171,5 @@
 
 </body>
 </html>
+
 
