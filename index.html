@@ -4,9 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CHANGBET789</title>
+  <style>
+    .slider {
+      position: relative;
+      width: 100%;
+      max-height: 250px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
 
-  <body>
- <!-- Slider -->
+    .slider img {
+      width: 100%;
+      display: none;
+      border-radius: 12px;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slider img.active {
+      display: block;
+    }
+
+    .btn-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 12px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn-with-icon img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slider -->
   <div class="slider">
     <img src="กงล้อ100%.png" class="slide active" alt="รูป1">
     <img src="คอมมิชชั่น.jpg" class="slide" alt="รูป2">
@@ -16,7 +55,28 @@
   <button class="btn-with-icon">
     <img src="icon.png" alt="ไอคอน"> เริ่มเล่น
   </button>
-</div>
+
+  <script>
+    const slides = document.querySelectorAll('.slider .slide');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    setInterval(nextSlide, 3000);
+  </script>
+
+</body>
+</html>
+
 
 <style>
 .slider {
@@ -258,6 +318,7 @@ setInterval(nextSlide, 3000);
 
 </body>
 </html>
+
 
 
 
