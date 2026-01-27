@@ -1,365 +1,128 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <style>
-/* ===== ปรับกลางจอมือถือ ===== */
-@media screen and (max-width: 480px) {
-  header h1 {
-    text-align: center; /* จัดข้อความตรงกลาง */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHANGBET789</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+  }
+
+  header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  /* ===== กล่องสวยพร้อมลูกเล่น ===== */
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+
+  .box {
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .box:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
   }
 
   .box h2 {
-    text-align: center; /* จัดหัวข้อในกล่องตรงกลาง */
+    margin-top: 0;
   }
 
-  .box p {
-    text-align: center; /* จัดข้อความปกติในกล่องตรงกลาง */
+  .btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #FF9800;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-}
-</style>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHANGBET789</title>
-  
- <style>
-    .slider {
-      position: relative;
-      width: 100%;
-      max-height: 250px;
-      overflow: hidden;
-      border-radius: 12px;
-      margin-bottom: 15px;
+
+  .btn-with-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-with-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  }
+
+  /* ===== จัดกลางมือถือ ===== */
+  @media screen and (max-width: 480px) {
+    header h1 {
+      text-align: center;
     }
 
-    .slider img {
-      width: 100%;
-      display: none;
-      border-radius: 12px;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .slider img.active {
+    .box h2, .box p, .btn-with-icon {
+      text-align: center;
       display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .btn-with-icon {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 12px;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-
-    .btn-with-icon img {
-      width: 20px;
-      height: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Slider -->
-  <div class="slider">
-    <img src="kiki1.jpg" class="slide" alt="รูป1">
-    <img src="kiki2.jpg" class="slide" alt="รูป2">
-    <img src="kiki3.jpg" class="slide" alt="รูป3">
-  </div>
-
-  <button class="btn-with-icon">
-    </button>
-
-  <script>
-    const slides = document.querySelectorAll('.slider .slide');
-    let current = 0;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-    }
-
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-
-    setInterval(nextSlide, 3000);
-  </script>
-
-</body>
-</html>
-
-<style>
-/* ===== ปรับกลางจอมือถือ ===== */
-@media screen and (max-width: 480px) {
-  header h1 {
-    text-align: center; /* จัดข้อความตรงกลาง */
-  }
-
-  .box h2 {
-    text-align: center; /* จัดหัวข้อในกล่องตรงกลาง */
-  }
-
-  .box p {
-    text-align: center; /* จัดข้อความปกติในกล่องตรงกลาง */
-  }
-}
-</style>
-<style>
-.slider {
-  position: relative;
-  width: 100%;
-  max-height: 250px; /* ปรับสูงสุดตามต้องการ */
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.slider img {
-  width: 100%;
-  display: none;
-  border-radius: 12px;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slider img.active {
-  display: block;
-}
-</style>
-  </body>
-<script>
-const slides = document.querySelectorAll('.slider .slide');
-let current = 0;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-}
-
-function nextSlide() {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}
-
-// สไลด์อัตโนมัติทุก 3 วินาที
-setInterval(nextSlide, 3000);
-</script>
-
-<script>
-  const slides = document.querySelectorAll('.slider .slide');
-  let current = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
-
-  // สไลด์อัตโนมัติทุก 3 วินาที
-  setInterval(nextSlide, 3000);
-</script>
-  
-  <style>
-    /* ===== พื้นฐานเว็บ ===== */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-    }
-
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 15px;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .menu-btn {
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    #menu {
-      display: none;
       margin-top: 10px;
     }
-
-    #menu a {
-      display: block;
-      color: white;
-      background: rgba(255,255,255,0.2);
-      padding: 10px;
-      margin: 6px 0;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    #menu a:hover {
-      background: rgba(255,255,255,0.4);
-    }
-
-    .container {
-      padding: 15px;
-    }
-
-    /* ===== กล่องและรูป ===== */
-    .box {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-
-    .box img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 10px;
-    }
-
-    /* ===== แกลเลอรีรูป (รวมแล้ว) ===== */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .gallery img {
-      width: calc(25% - 15px); /* 4 ต่อแถว */
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
-
-    /* มือถือปรับรูป */
-    @media screen and (max-width: 768px) {
-      .gallery img {
-        width: calc(50% - 15px); /* 2 ต่อแถว */
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .gallery img {
-        width: 100%; /* 1 ต่อแถว */
-      }
-    }
-
-    /* ===== ปุ่มพร้อมไอคอน ===== */
-    .btn-with-icon {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 12px;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn-with-icon img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .btn-with-icon:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    }
-  </style>
+  }
+</style>
 </head>
-
 <body>
 
 <header>
-  <div class="topbar">
-    <h1>CHANGBET789</h1>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-  </div>
-
-  <nav id="menu">
-    <a href="#home">หน้าแรก</a>
-    <a href="#about">เกี่ยวกับ</a>
-    <a href="#gallery">แกลเลอรี</a>
-    <a href="#contact">ติดต่อ</a>
-  </nav>
+  <h1>CHANGBET789</h1>
 </header>
 
 <div class="container">
   <div class="box" id="home">
     <h2>เว็บอันดับ 1 ระดับประเทศ</h2>
-    <p>รวมเกมทุกค่ายอยู่ที่นี้ที่เดียว แจก โบนัสไทม์ตลอด 24ขั่วโมง </p>
-    </div>
+    <p>รวมเกมทุกค่ายอยู่ที่นี้ที่เดียว แจก โบนัสไทม์ตลอด 24 ชั่วโมง</p>
+    <button class="btn-with-icon">เข้าร่วมเลย</button>
+  </div>
 
   <div class="box" id="about">
     <h2>โปรโมชั่นสุดพิเศษ</h2>
-    <p>รีบรับด่วนก่อนหมดเวลา</p>
-    <img src="free1.jpg" alt="รับฟรี">
+    <p>รีบรับด่วนก่อนหมดเวลา!</p>
+    <button class="btn-with-icon">รับโบนัส</button>
   </div>
 
   <div class="box" id="gallery">
     <h2>แจกมากที่สุดในตอนนี้</h2>
     <p>อย่าช้ามีเวลาจำกัด</p>
-    <div class="gallery">
-      <img src="k1.jpg" alt="รูป 1">
-      <img src="k2.jpg" alt="รูป 2">
-      <img src="k3.jpg" alt="รูป 3">
-      <img src="k4.jpg" alt="รูป 4">
-    </div>
+    <button class="btn-with-icon">ดูแกลเลอรี</button>
   </div>
 
   <div class="box" id="contact">
     <h2>ติดต่อเรา</h2>
     <p>LINE / Facebook / โทรศัพท์</p>
+    <button class="btn-with-icon">ติดต่อ</button>
   </div>
 </div>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-</script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
