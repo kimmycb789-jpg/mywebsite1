@@ -18,26 +18,45 @@
 </div>
 
 <style>
-  .slider {
-    position: relative;
-    width: 100%;
-    max-height: 250px;
-    overflow: hidden;
-    border-radius: 12px;
-    margin-bottom: 15px;
-  }
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 250px; /* ปรับสูงสุดตามต้องการ */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
 
-  .slider img {
-    width: 100%;
-    display: none;
-    border-radius: 12px;
-    transition: opacity 0.5s ease-in-out;
-  }
+.slider img {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-in-out;
+}
 
-  .slider img.active {
-    display: block;
-  }
+.slider img.active {
+  display: block;
+}
 </style>
+
+<script>
+const slides = document.querySelectorAll('.slider .slide');
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+// สไลด์อัตโนมัติทุก 3 วินาที
+setInterval(nextSlide, 3000);
+</script>
 
 <script>
   const slides = document.querySelectorAll('.slider .slide');
@@ -238,6 +257,7 @@
 
 </body>
 </html>
+
 
 
 
