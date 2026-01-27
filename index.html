@@ -1,91 +1,195 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บเริ่มต้นของฉัน</title>
+
   <style>
- body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-  }
-
-  header {
-    background: #4CAF50;
-    color: white;
-    padding: 15px;
-    text-align: center;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-  /* ===== กล่องสวยพร้อมลูกเล่น ===== */
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
-  }
-
-  .box {
-    background: linear-gradient(135deg, #4CAF50, #81C784);
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .box:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
-  }
-
-  .box h2 {
-    margin-top: 0;
-  }
-
-  .btn-with-icon {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 12px;
-    background-color: #FF9800;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .btn-with-icon img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .btn-with-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  }
-
-  /* ===== จัดกลางมือถือ ===== */
-  @media screen and (max-width: 480px) {
-    header h1 {
-      text-align: center;
+    /* ===== พื้นฐานเว็บ ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
     }
 
-    .box h2, .box p, .btn-with-icon {
-      text-align: center;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
     }
 
-    .btn-with-icon {
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-btn {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    #menu {
+      display: none;
       margin-top: 10px;
-    
+    }
+
+    #menu a {
+      display: block;
+      color: white;
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    .container {
+      padding: 15px;
+    }
+
+    /* ===== กล่องและรูป ===== */
+    .box {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== แกลเลอรีรูป ===== */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .gallery img {
+      width: calc(50% - 10px);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    @media screen and (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+
+    /* ===== ปุ่มพร้อมไอคอน ===== */
+    .btn-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 12px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-with-icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-with-icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topbar">
+    <h1>เว็บเริ่มต้นของฉัน 👋</h1>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav id="menu">
+    <a href="#home">หน้าแรก</a>
+    <a href="#about">เกี่ยวกับ</a>
+    <a href="#gallery">แกลเลอรี</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="box" id="home">
+    <h2>หน้าแรก</h2>
+    <p>ยินดีต้อนรับสู่เว็บเริ่มต้นของฉัน</p>
+    <button class="btn-with-icon">
+      <img src="icon.png" alt="ไอคอน"> เริ่มเล่น
+    </button>
+  </div>
+
+  <div class="box" id="about">
+    <h2>เกี่ยวกับเรา</h2>
+    <p>เราให้บริการที่ดีที่สุด พร้อมทีมงานมืออาชีพ</p>
+    <img src="img1.jpg" alt="ตัวอย่างรูป">
+  </div>
+
+  <div class="box" id="gallery">
+    <h2>แกลเลอรี</h2>
+    <p>ตัวอย่างรูปหลายรูปในเว็บ</p>
+    <div class="gallery">
+      <img src="img1.jpg" alt="รูป 1">
+      <img src="img2.jpg" alt="รูป 2">
+      <img src="img3.jpg" alt="รูป 3">
+      <img src="img4.jpg" alt="รูป 4">
+    </div>
+  </div>
+
+  <div class="box" id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>LINE / Facebook / โทรศัพท์</p>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
+
+*********************************************************
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHANGBET789</title>
+******************************************************
+เกือบ 100%
+---------------------------------------------
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <style>
 /* ===== ปรับกลางจอมือถือ ===== */
 @media screen and (max-width: 480px) {
   header h1 {
@@ -390,7 +494,6 @@ setInterval(nextSlide, 3000);
     <a href="#about">เกี่ยวกับ</a>
     <a href="#gallery">แกลเลอรี</a>
     <a href="#contact">ติดต่อ</a>
-    <button class="btn-with-icon">เข้าร่วมเลย</button>
   </nav>
 </header>
 
@@ -398,7 +501,6 @@ setInterval(nextSlide, 3000);
   <div class="box" id="home">
     <h2>เว็บอันดับ 1 ระดับประเทศ</h2>
     <p>รวมเกมทุกค่ายอยู่ที่นี้ที่เดียว แจก โบนัสไทม์ตลอด 24ขั่วโมง </p>
-    <button class="btn-with-icon">เข้าร่วมเลย</button>
     </div>
 
   <div class="box" id="about">
@@ -433,6 +535,3 @@ setInterval(nextSlide, 3000);
 
 </body>
 </html>
-
-
-
