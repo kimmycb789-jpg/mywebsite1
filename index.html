@@ -1,38 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เว็บของฉัน</title>
+  <title>เว็บเริ่มต้นของฉัน</title>
 
   <style>
-    
-    .gallery {
-  display: flex;
-  flex-wrap: wrap; /* ถ้ามากกว่า 1 แถวจะเลื่อนลงอัตโนมัติ */
-  gap: 10px; /* เว้นระยะระหว่างรูป */
-  margin-top: 10px;
-}
-
-.gallery img {
-  width: calc(50% - 10px); /* 2 รูปต่อแถว (หัก gap) */
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-}
-
-/* สำหรับมือถือ ให้รูปเต็มความกว้าง */
-@media screen and (max-width: 600px) {
-  .gallery img {
-    width: 100%;
-  }
-}
-
+    /* ===== พื้นฐานเว็บ ===== */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -41,7 +15,7 @@
 
     header {
       background: #4CAF50;
-      color: black;
+      color: white;
       padding: 15px;
     }
 
@@ -71,77 +45,136 @@
       text-decoration: none;
     }
 
+    #menu a:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
     .container {
       padding: 15px;
     }
 
+    /* ===== กล่องและรูป ===== */
     .box {
       background: white;
       padding: 15px;
       border-radius: 12px;
       margin-bottom: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
-  }
+
+    .box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== แกลเลอรีรูป ===== */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .gallery img {
+      width: calc(50% - 10px);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    @media screen and (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+
+    /* ===== ปุ่มพร้อมไอคอน ===== */
+    .btn-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 12px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-with-icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-with-icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 
 <body>
- 
-<div class="box">
-  <img src="k1.jpg" alt="รูปที่ 1">
-  <p>รูปที่ 1</p>
- 
+
 <header>
   <div class="topbar">
-    <h1>CHANGBET789/h1>
+    <h1>เว็บเริ่มต้นของฉัน 👋</h1>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
   </div>
 
   <nav id="menu">
     <a href="#home">หน้าแรก</a>
-    <a href="#about">โบนัสไทม์</a>
-    <a href="#contact">เข้าเล่นเกม</a>
+    <a href="#about">เกี่ยวกับ</a>
+    <a href="#gallery">แกลเลอรี</a>
+    <a href="#contact">ติดต่อ</a>
   </nav>
 </header>
 
 <div class="container">
   <div class="box" id="home">
-    <img src="kim1.jpg">
     <h2>หน้าแรก</h2>
-     </div>
+    <p>ยินดีต้อนรับสู่เว็บเริ่มต้นของฉัน</p>
+    <button class="btn-with-icon">
+      <img src="icon.png" alt="ไอคอน"> เริ่มเล่น
+    </button>
+  </div>
 
   <div class="box" id="about">
-    <img src="kim2.jpg">
-    <h2>โบนัสไทม์</h2>
-</div>
+    <h2>เกี่ยวกับเรา</h2>
+    <p>เราให้บริการที่ดีที่สุด พร้อมทีมงานมืออาชีพ</p>
+    <img src="img1.jpg" alt="ตัวอย่างรูป">
+  </div>
+
+  <div class="box" id="gallery">
+    <h2>แกลเลอรี</h2>
+    <p>ตัวอย่างรูปหลายรูปในเว็บ</p>
+    <div class="gallery">
+      <img src="img1.jpg" alt="รูป 1">
+      <img src="img2.jpg" alt="รูป 2">
+      <img src="img3.jpg" alt="รูป 3">
+      <img src="img4.jpg" alt="รูป 4">
+    </div>
+  </div>
 
   <div class="box" id="contact">
-    <img src="kim3.jpg">
     <h2>ติดต่อเรา</h2>
- </div>
+    <p>LINE / Facebook / โทรศัพท์</p>
+  </div>
+</div>
 
-  
 <script>
   function toggleMenu() {
     const menu = document.getElementById("menu");
-    menu.style.display =
-      menu.style.display === "block" ? "none" : "block";
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
   }
-
-  
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
