@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เว็บแรกของฉัน</title>
-
+  <title>เว็บของฉัน</title>
 
   <style>
     body {
@@ -16,7 +15,7 @@
     header {
       background: #4CAF50;
       color: white;
-      padding: 20px;
+      padding: 15px;
     }
 
     .topbar {
@@ -37,8 +36,8 @@
 
     #menu a {
       display: block;
-      background: rgba(255,255,255,0.2);
       color: white;
+      background: rgba(255,255,255,0.2);
       padding: 10px;
       margin: 6px 0;
       border-radius: 8px;
@@ -50,74 +49,42 @@
     }
 
     .box {
-      background: #fff;
-      margin-bottom: 15px;
+      background: white;
       padding: 15px;
       border-radius: 12px;
-    }
-
-    .box img {
-      width: 100%;
-      border-radius: 12px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
 
+<body>
 
-  <header>
-    <div class="topbar">
-    <h1> BONUS TIME👋 </h1>
-    <p> เกมแจกทั้งวันไม่มีอั้น </p>
-     </header>
-  
- <nav class="menu" id="menu">
-    <a href="#box1">เข้าเล่น</a>
-    <a href="#box2">โปรโมชั่น</a>
-    <a href="#box3">อั่งเปา</a>
-    <a href="#box4">ติดต่อเรา</a>
+<header>
+  <div class="topbar">
+    <h1>สวัสดี 👋</h1>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav id="menu">
+    <a href="#home">หน้าแรก</a>
+    <a href="#about">เกี่ยวกับ</a>
+    <a href="#contact">ติดต่อ</a>
   </nav>
-  <div class="container">
+</header>
 
-  <div class="box">
-    <img src="k1.jpg" alt="1">
-    <p>รูปที่ 1</p>
-  </div>
-
-  <div class="box">
-    <img src="k2.jpg" alt="2">
-    <p>รูปที่ 2</p>
-  </div>
-
-  <div class="box">
-    <img src="k3.jpg" alt="3">
-    <p>รูปที่ 3</p>
-  </div>
-
-  <div class="box">
-    <img src="k4.jpg" alt="4">
-    <p>รูปที่ 4</p>
-  </div>
+<div class="container">
+  <div class="box" id="home">หน้าแรกของเว็บ</div>
+  <div class="box" id="about">เกี่ยวกับเรา</div>
+  <div class="box" id="contact">ติดต่อเรา</div>
+</div>
 
 <script>
   function toggleMenu() {
     const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+    menu.style.display =
+      menu.style.display === "block" ? "none" : "block";
   }
 </script>
 
-  </div>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
