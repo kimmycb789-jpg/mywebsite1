@@ -6,6 +6,38 @@
   <title>เว็บแรกของฉัน</title>
 
  <style>
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* เมนู */
+#menu {
+  display: none;
+  margin-top: 10px;
+}
+
+#menu a {
+  display: block;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background: rgba(255,255,255,0.4);
+}
+   
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -108,12 +140,18 @@
     <p>เข้าเล่น</p>
   </div>
 
-
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
 
   </div>
 
 </body>
 </html>
+
 
 
 
