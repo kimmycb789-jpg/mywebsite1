@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เว็บเริ่มต้นของฉัน</title>
+  <title>CHANGBET789</title>
 
   <style>
     /* ===== พื้นฐานเว็บ ===== */
@@ -68,29 +68,36 @@
       margin-bottom: 10px;
     }
 
-    /* ===== แกลเลอรีรูป ===== */
+    /* ===== แกลเลอรีรูป (รวมแล้ว) ===== */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
       margin-top: 10px;
     }
 
     .gallery img {
-      width: calc(50% - 10px);
+      width: calc(25% - 15px); /* 4 ต่อแถว */
       border-radius: 12px;
       cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.25s, box-shadow 0.25s;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
-    @media screen and (max-width: 600px) {
+    /* มือถือปรับรูป */
+    @media screen and (max-width: 768px) {
       .gallery img {
-        width: 100%;
+        width: calc(50% - 15px); /* 2 ต่อแถว */
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .gallery img {
+        width: 100%; /* 1 ต่อแถว */
       }
     }
 
@@ -156,10 +163,10 @@
     <h2>แกลเลอรี</h2>
     <p>ตัวอย่างรูปหลายรูปในเว็บ</p>
     <div class="gallery">
-      <img src="img1.jpg" alt="รูป 1">
-      <img src="img2.jpg" alt="รูป 2">
-      <img src="img3.jpg" alt="รูป 3">
-      <img src="img4.jpg" alt="รูป 4">
+      <img src="k1.png" alt="รูป 1">
+      <img src="k2.png" alt="รูป 2">
+      <img src="k3.png" alt="รูป 3">
+      <img src="k4.png" alt="รูป 4">
     </div>
   </div>
 
