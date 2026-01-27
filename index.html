@@ -5,6 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CHANGBET789</title>
 
+  <div class="box" id="home">
+  <h2>หน้าแรก</h2>
+  <p>ยินดีต้อนรับสู่เว็บเริ่มต้นของฉัน</p>
+
+  <!-- Slider -->
+  <div class="slider">
+    <img src="/mnt/data/95fc2391-36c7-4940-b3b0-89428477b96d.png" class="slide active" alt="รูป1">
+    <img src="img2.jpg" class="slide" alt="รูป2">
+    <img src="img3.jpg" class="slide" alt="รูป3">
+  </div>
+
+  <button class="btn-with-icon">
+    <img src="icon.png" alt="ไอคอน"> เริ่มเล่น
+  </button>
+</div>
+
+<style>
+  .slider {
+    position: relative;
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .slider img {
+    width: 100%;
+    display: none;
+    border-radius: 12px;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .slider img.active {
+    display: block;
+  }
+</style>
+
+<script>
+  const slides = document.querySelectorAll('.slider .slide');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  // สไลด์อัตโนมัติทุก 3 วินาที
+  setInterval(nextSlide, 3000);
+</script>
+  
   <style>
     /* ===== พื้นฐานเว็บ ===== */
     body {
@@ -132,7 +189,7 @@
 
 <header>
   <div class="topbar">
-    <h1>เว็บเริ่มต้นของฉัน 👋</h1>
+    <h1>CHANGBET789</h1>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
   </div>
 
@@ -185,4 +242,5 @@
 
 </body>
 </html>
+
 
