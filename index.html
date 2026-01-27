@@ -6,6 +6,33 @@
   <title>เว็บของฉัน</title>
 
   <style>
+    
+    .gallery {
+  display: flex;
+  flex-wrap: wrap; /* ถ้ามากกว่า 1 แถวจะเลื่อนลงอัตโนมัติ */
+  gap: 10px; /* เว้นระยะระหว่างรูป */
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: calc(50% - 10px); /* 2 รูปต่อแถว (หัก gap) */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* สำหรับมือถือ ให้รูปเต็มความกว้าง */
+@media screen and (max-width: 600px) {
+  .gallery img {
+    width: 100%;
+  }
+}
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -101,6 +128,7 @@
 
 </body>
 </html>
+
 
 
 
